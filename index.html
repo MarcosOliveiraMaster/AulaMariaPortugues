@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aulas de reforço Maria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    .question {
+      background: #fff;
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 15px;
+      border: 2px solid #e0e0e0;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+      max-width: 800px;
+    }
+    .question p {
+      font-weight: bold;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      cursor: pointer;
+      position: relative;
+    }
+    input[type="radio"] {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #3498db;
+      border-radius: 6px;
+      margin-right: 8px;
+      outline: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    input[type="radio"]:checked {
+      background: #3498db;
+      transform: scale(1.1);
+    }
+    .feedback {
+      margin-top: 8px;
+      font-weight: bold;
+      display: none;
+    }
+    .feedback.correct {
+      color: green;
+    }
+    .feedback.incorrect {
+      color: red;
+    }
+    .btn-reset {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 24px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn-reset:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aulas de reforço Maria</h1>
+
+  <!-- Questões teóricas -->
+  <div class="question" data-answer="Pretérito perfeito do indicativo">
+    <p>1. Qual é o tempo verbal usado para indicar ações concluídas no passado?</p>
+    <label><input type="radio" name="q1" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q1" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q1" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q1" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Presente do subjuntivo">
+    <p>2. Qual é o tempo verbal usado para indicar desejo, hipótese ou incerteza?</p>
+    <label><input type="radio" name="q2" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q2" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q2" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q2" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Imperfeito do indicativo">
+    <p>3. Qual é o tempo verbal usado para ações habituais no passado?</p>
+    <label><input type="radio" name="q3" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q3" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q3" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q3" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Presente do indicativo">
+    <p>4. Qual é o tempo verbal usado para expressar ações no momento presente ou verdades universais?</p>
+    <label><input type="radio" name="q4" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q4" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q4" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q4" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <!-- Questões aplicadas -->
+  <div class="question" data-answer="Presente do subjuntivo">
+    <p>5. "Espero que ele estude amanhã." – Qual é o tempo verbal usado?</p>
+    <label><input type="radio" name="q5" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q5" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q5" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <label><input type="radio" name="q5" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Pretérito perfeito do indicativo">
+    <p>6. "Ontem eu viajei para São Paulo." – Qual é o tempo verbal usado?</p>
+    <label><input type="radio" name="q6" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q6" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q6" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <label><input type="radio" name="q6" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Imperfeito do indicativo">
+    <p>7. "Quando era criança, brincava na rua." – Qual é o tempo verbal usado?</p>
+    <label><input type="radio" name="q7" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q7" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q7" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q7" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Presente do indicativo">
+    <p>8. "O sol nasce no leste." – Qual é o tempo verbal usado?</p>
+    <label><input type="radio" name="q8" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q8" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q8" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q8" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Presente do subjuntivo">
+    <p>9. "Talvez chova amanhã." – Qual é o tempo verbal usado?</p>
+    <label><input type="radio" name="q9" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q9" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <label><input type="radio" name="q9" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q9" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Pretérito perfeito do indicativo">
+    <p>10. "Eles chegaram cedo." – Qual é o tempo verbal usado?</p>
+    <label><input type="radio" name="q10" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q10" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q10" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q10" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Imperfeito do indicativo">
+    <p>11. "Nós falávamos muito quando éramos jovens." – Qual é o tempo verbal usado?</p>
+    <label><input type="radio" name="q11" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q11" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q11" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q11" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question" data-answer="Presente do indicativo">
+    <p>12. "Eu estudo matemática todos os dias." – Qual é o tempo verbal usado?</p>
+    <label><input type="radio" name="q12" value="Presente do indicativo"> Presente do indicativo</label>
+    <label><input type="radio" name="q12" value="Pretérito perfeito do indicativo"> Pretérito perfeito do indicativo</label>
+    <label><input type="radio" name="q12" value="Imperfeito do indicativo"> Imperfeito do indicativo</label>
+    <label><input type="radio" name="q12" value="Presente do subjuntivo"> Presente do subjuntivo</label>
+    <div class="feedback"></div>
+  </div>
+
+  <button class="btn-reset" onclick="resetQuiz()">Reset</button>
+  <script>
+    document.querySelectorAll('.question input[type=radio]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const questionDiv = this.closest('.question');
+        const correctAnswer = questionDiv.dataset.answer;
+        const feedback = questionDiv.querySelector('.feedback');
+        if (this.parentElement.textContent.trim() === correctAnswer) {
+          feedback.textContent = "Correto!";
+          feedback.className = "feedback correct";
+        } else {
+          feedback.textContent = `Incorreto! Resposta correta: ${correctAnswer}`;
+          feedback.className = "feedback incorrect";
+        }
+        feedback.style.display = "block";
+      });
+    });
+
+    function shuffleOptions(questionDiv) {
+      let labels = Array.from(questionDiv.querySelectorAll('label'));
+      for (let i = labels.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [labels[i], labels[j]] = [labels[j], labels[i]];
+      }
+      labels.forEach(label => questionDiv.insertBefore(label, questionDiv.querySelector('.feedback')));
+    }
+
+    function resetQuiz() {
+      document.querySelectorAll('input[type=radio]').forEach(input => input.checked = false);
+      document.querySelectorAll('.feedback').forEach(fb => fb.style.display = "none");
+      document.querySelectorAll('.question').forEach(q => shuffleOptions(q));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Embaralha as opções ao carregar a página
+    document.querySelectorAll('.question').forEach(q => shuffleOptions(q));
+  </script>
+</body>
+</html>
